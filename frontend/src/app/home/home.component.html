@@ -1,0 +1,23 @@
+<h3>Most popular names in Poland</h3>
+<div class="row m-3">
+    <label class="col-sm-1 col-form-label text-end fw-bold" for="filter">Filter:</label>
+    <div class="col-sm-3">
+        <input class="form-control form-control-sm" id="filter" type="text" [(ngModel)]="filter" (ngModelChange)="refresh(filter)"/>
+    </div>
+</div>
+<table class="table table-sm table-striped table-hover">
+    <thead>
+        <tr>
+            <th (click)="sort='pozycja'; rev=!rev">Rank</th>
+            <th (click)="sort='imie'; rev=!rev">Name</th>
+            <th (click)="sort='plec'; rev=!rev">Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of imiona | orderBy : sort : rev">
+            <td>{{x.pozycja}}</td>
+            <td>{{x.imie}}</td>
+            <td>{{x.plec}}</td>
+        </tr>
+    </tbody>
+</table>
