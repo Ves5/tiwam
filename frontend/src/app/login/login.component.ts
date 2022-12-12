@@ -29,7 +29,6 @@ export class LoginComponent {
   onLoginSubmit() {
     $.get('http://localhost:8080/login.php', {login:this.login, hash:this.hash}, (data: string) => {
       this.result = data;
-      alert(this.result)
     }, "text")
   }
 

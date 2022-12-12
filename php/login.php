@@ -1,5 +1,6 @@
 <?php
-session_start(['cookie_secure' => 0]);
+
+session_start();
 
 // connect to redis cache
 $redis = new Redis();
