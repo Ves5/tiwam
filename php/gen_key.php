@@ -18,6 +18,4 @@ $redis->set($redis_key, $new_key, 3600);
 // send key to requester
 header("Content-Type: text/plain");
 header("Access-Control-Allow-Origin: *");
-
-//setcookie("TestCookie", "testValue", time()+600, '/');
 print($new_key);

@@ -4,7 +4,7 @@
         <form (ngSubmit)="onLoginSubmit()">
             <div class="mb-3">
                 <label for="loginInput" class="form-label">Login</label>
-                <input type="text" class="form-control" id="loginInput" name="login" (ngModel)="login">
+                <input type="text" class="form-control" id="loginInput" name="login" [(ngModel)]="login">
             </div>
             <div class="mb-3">
                 <label for="passwordInput" class="form-label">Password</label>
@@ -15,11 +15,14 @@
                 <input type="text" class="form-control" id="keyInput" name="key" disabled [ngModel]="key">
             </div>
             <div class="mb-3">
+                <label for="pwhashInput" class="form-label">PwHash</label>
+                <input type="text" class="form-control" id="pwhashInput" name="pwhash" disabled [ngModel]="pwhash">
+            </div>
+            <div class="mb-3">
                 <label for="hashInput" class="form-label">Hash</label>
                 <input type="text" class="form-control" id="hashInput" name="hash" disabled [ngModel]="hash">
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
-        <p>Cached key for this session: {{result}} </p>
     </div>
 </div>
