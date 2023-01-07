@@ -1,0 +1,9 @@
+<h3>Web Switching</h3>
+<div>
+    <button type="button" class="btn btn-secondary" (click)="switchSite()">Switch</button>
+</div>
+<p>Switched embeded site to <a href="{{switch.site}}">{{switch.site}}</a> with odds of {{switch.odds}}%</p>
+<hr>
+<div class="ratio ratio-16x9">
+    <iframe [src]="switch.site | safe"></iframe>
+</div>

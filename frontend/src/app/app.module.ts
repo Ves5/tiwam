@@ -8,7 +8,9 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-import { OrderByPipe } from './OrderByPipe';
+import { WebswitchComponent } from './webswitch/webswitch.component';
+import { SafePipe } from './safe.pipe';
+import { OrderByPipe } from './orderby.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { OrderByPipe } from './OrderByPipe';
     RegisterComponent,
     PageNotFoundComponent,
     HomeComponent,
+    WebswitchComponent,
+    SafePipe,
     OrderByPipe,
   ],
   imports: [
