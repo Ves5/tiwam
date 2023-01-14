@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { WebswitchComponent } from './webswitch/webswitch.component';
 import { SafePipe } from './safe.pipe';
 import { OrderByPipe } from './orderby.pipe';
+import { WebcacheComponent } from './webcache/webcache.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { OrderByPipe } from './orderby.pipe';
     WebswitchComponent,
     SafePipe,
     OrderByPipe,
+    WebcacheComponent,
   ],
   imports: [
     BrowserModule,
